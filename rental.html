@@ -120,7 +120,7 @@
 	
 	.highlight-box {
 		margin-left: auto;
-		width: 50%
+		width: 50%;
 		border: 2px solid #00aaff;
 		padding: 15px;
 		background-color: #111;
@@ -137,52 +137,141 @@
 		}
 		
 	.aircraft-flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 30px;
+		flex-wrap: wrap;
+		}
+
+	.aircraft-text {
+		flex: 1;
+		min-width: 250px;
+	}
+
+	.aircraft-img {
+		width: 300px;
+		height: auto;
+		border: 3px solid #00aaff;
+		border-radius: 12px;
+		background-color: #111;
+	}
+
+	.rental-requirements {
+		background-color: #111;
+		border: 2px solid #00aaff;
+		border-radius: 10px;
+		padding: 30px;
+		margin: 40px auto;
+		width: 80%;
+		max-width: 800px;
+		box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
+	}
+
+	.rental-requirements h2 {
+		color: #00aaff;
+		margin-bottom: 20px;
+	}
+
+	.rental-requirements ul {
+		list-style-type: disc;
+		padding-left: 20px;
+		line-height: 1.6;
+  
+	}
+	
+	.intro-text {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 30px 0;
+  color: #00aaff;
+  text-shadow: 0 0 5px rgba(0, 170, 255, 0.2);
+}
+
+	form input,
+	form textarea {
+		width: 100%;
+		padding: 10px;
+		margin-top: 5px;
+		border-radius: 6px;
+		border: none;
+		background-color: #222;
+		color: #fff;
+		}
+		
+	
+	form label {
+		color: #00aaff;
+		font-weight: bold;
+	}
+	
+	form button {
+			background-color: #00aaff;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 6px;
+			cursor: pointer;
+			font-weight:L bold;
+			margin-top: 10px;
+			transition: background-color 0.3s ease;
+			}
+			
+	form button:hover {
+		background-color: #0077cc;
+		}
+
+	.side-gallery {
+  position: fixed;
+  top: 140px; /* start below the header */
+  height: calc(100vh - 140px);
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 0;
+  pointer-events: none; /* so your content is clickable */
 }
 
-.aircraft-text {
-  flex: 1;
-  min-width: 250px;
+.left-gallery {
+  left: 10px;
 }
 
-.aircraft-img {
-  width: 300px;
-  height: auto;
-  border: 3px solid #00aaff;
-  border-radius: 12px;
-  background-color: #111;
+.right-gallery {
+  right: 10px;
 }
 
-.rental-requirements {
-  background-color: #111;
-  border: 2px solid #00aaff;
+.side-gallery img {
+  max-width: 100px;
   border-radius: 10px;
-  padding: 30px;
-  margin: 40px auto;
-  width: 80%;
-  max-width: 800px;
+  opacity: 0.25;
+  transition: transform 0.3s ease;
   box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
 }
 
-.rental-requirements h2 {
-  color: #00aaff;
-  margin-bottom: 20px;
+.side-gallery img:hover {
+  transform: scale(1.05);
+  opacity: 0.4;
 }
 
-.rental-requirements ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  line-height: 1.6;
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('sky.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2; /* So it's behind everything */
+  opacity: 0.1; /* Adjust this value to make it more/less visible */
+  pointer-events: none;
 }
 
-
-    a {
-      color: #00aaff;
-    }
+	
   </style>
 </head>
 
@@ -193,8 +282,13 @@
     <p class="slogan">We Get Fly</p>
   </header>
   
-  <p><center> Welcome to the SkyLease Rental application! Here you will learn the requirement to rent an aircraft and how to get approved to rent aircrafts! </p></center>
+   <nav>
+    <a href="learnaircraft.html">Learn About Aircraft</a>
+    <a href="rental.html">Apply for rental license</a>
+    <a href="#contact">Contacts</a>
+  </nav>
   
+  <center><p class="intro-text">Welcome to the SkyLease Rental application! Here you will learn the requirement to rent an aircraft and how to get approved to rent aircrafts!</p></center>
   <div class="rental-requirements">
   <h2>Rental Requirement</h2>
   <ul>
@@ -205,3 +299,51 @@
 	<li>Must be at least 18 years of age.</li>
 	</ul>
 	</div>
+	
+	 <div class="rental-requirements">
+	 <h2>How to obtain a Skylease License</h2>
+	 <ul>
+	 <li>Fill out the information listed on the side</li>
+	 <li>Upload your license and your flight hours, a skylease supervisor will review your application</li>
+	 <li>Upload proof of renter's insurance and drivers license/State issued ID for further identification</li>
+	 <li>Once uploaded, wait 1-5 business days for your application to reviewed. If there are errors, you will be emailed</li>
+	 </ul>
+	 </div>
+	 
+	 <div class ="rental-requirements">
+	 <h2>Rental Application Form</h2>
+	 <form action-"https://formsubmit.co/iniquezrusk@gmail.com" method="POST">
+		<label for="firstName">First name:</label><br>
+		<input type="text" id="firstName" name="firstName" required><br><br>
+		
+		<label for="lastName">Last name:</label><br>
+		<input type="text" id="lastName" name="lastName" required><br><br>
+		
+		<label for="Suffix">Suffix (if none, type N/A)</label><br>
+		<input type="text" id="suffix" name="suffix" required><br><br>
+		
+		<label for="email">Email Address:</label><br>
+		<input type="text" id="license" name="license" required><br><br>
+		
+		<label for="hours">Flight Hours:</label><br>
+		<input type="number" id="hours" name="hours" required><br><br>
+		
+		<label for="message">Anything else we should know?</label><br>
+		<textarea id="message" name="message" rows="4"></textarea><br><br>
+		
+		<button type="submit">Submit Application</button>
+		</form>
+		</div>
+		<div class="side-gallery left-gallery">
+</div>
+
+		
+		<footer style="background-color: #001f3f; text-align: center; padding: 20px; font-size: 14px; color: #fff;">
+  &copy; 2025 SkyLease Aviation. All rights reserved.<br>
+  <a href="mailto:info@skylease.com" style="color: #00aaff;">Contact Us</a> |
+  <a href="skyleaserough.html" style="color: #00aaff;">Return to Home</a>
+</footer>
+
+	 
+
+	
