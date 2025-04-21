@@ -120,7 +120,7 @@
 	
 	.highlight-box {
 		margin-left: auto;
-		width: 50%
+		width: 50%;
 		border: 2px solid #00aaff;
 		padding: 15px;
 		background-color: #111;
@@ -183,7 +183,21 @@
   flex: 1;
 }
 
-
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('sky.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2; /* So it's behind everything */
+  opacity: 0.1; /* Adjust this value to make it more/less visible */
+  pointer-events: none;
+}
 
 
     a {
@@ -196,8 +210,18 @@
     <h1>SkyLease</h1>
     <p class="slogan">Learn about our Aircrafts!</p>
   </header>
+  
+   <nav>
+    <a href="learnaircraft.html">Learn About Aircraft</a>
+    <a href="rental.html">Apply for rental license</a>
+    <a href="#contact">Contacts</a>
+  </nav>
 
-  <p class="intro"><center>Glad you've selected to check our surplus at SkyLease! This page offers in-depth photos and information about our aircrafts to rent!</center></p>
+  <p style="color: #00aaff; text-align: center;">
+  Glad you've selected to check our surplus at SkyLease! This page offers in-depth photos and information about our aircrafts to rent!
+</p>
+
+
   
   <div class="aircraft-card">
   <img src="plane.jpg" alt="Cessna 172" class="aircraft-img">
@@ -250,7 +274,7 @@
 	<div class="aircraft-info">
 	<h3>Cessna 208 Caravan</h3>
 	<p>A versatile, high-capacity turboprop aircraft widely used for regional transport, skydiving ops, and short-haul commercial flights. Its rugged design and reliable performance make it perfect for group travel or cargo runs in remote areas.</p>
-	li><strong>Top Speed:</strong> 186 knots</li>
+		<li><strong>Top Speed:</strong> 186 knots</li>
 		<li><strong>Range:</strong>970 nautical miles</li>
 		<li><strong>Engine:</strong>Pratt & Whitney PT6A turboprop</li>
 		<li><strong>Seats:</strong>Up to 14</li>
