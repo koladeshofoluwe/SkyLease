@@ -104,10 +104,19 @@
 
     .section {
       margin-bottom: 40px;
-    }
+	  padding: 20px;
+	  background-color #111;
+	  border-radius: 10px;
+	  box-shadow: 0 0 10px rgba(0, 180, 255, 0.05);
+	  }
+    
 
     .section h3 {
       color: #00aaff;
+	  border-bottom: 2px solid #00aaff;
+	  padding-bottom: 8px;
+	  margin-bottom: 15px;
+	  }
     }
 
     footer {
@@ -157,6 +166,24 @@
   background-color: #111;
 }
 
+.side-plane {
+  position: fixed;
+  top: 0;
+  width: 140px; /* adjust to fit your layout */
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.15; /* subtle, or increase to 0.3 for more pop */
+  z-index: 0;
+  pointer-events: none; /* so users can still click other stuff */
+}
+
+.left-plane {
+  left: 0;
+}
+
+.right-plane {
+  right: 0;
+}
 
 
     a {
@@ -173,7 +200,7 @@
 
   <nav>
     <a href="learnaircraft.html">Learn About Aircraft</a>
-    <a href="#requirements">Apply for rental license</a>
+    <a href="rental.html">Apply for rental license</a>
     <a href="#contact">Contacts</a>
   </nav>
 
@@ -185,36 +212,38 @@
     </div>
   </div>
 
-	<div class="content">
-	<div id="learn" class="section">
-		<h3>Types of aircrafts offered:</h3>
-		<p><strong>Cessna 172L</strong> A popular single-engine, four seat aircraft grat for student pilots and scenic flights.</p>
-		<p><strong>Piper PA-28:</strong> Known for reliability and ease of handling, ideal for short range travel and training.</p>
-		<p><strong>Cirrus SR22:</strong> A high-performance aircraft with luxury interiors and advanced avionics systems.</p>
-		<p><strong>Cessna 208 Caravan:</strong> A rugged, high-capacity aircraft built for group travel, cargo runs, and regional hops. Reliable and versatile with room for up to 14 passengers.</p>
-		</div>
-		</div>
-	
-    <div id="learn" class="section">
-      <h3><p>Requirements to Rent</p></h3>
-      <ul>
-        <li>Must hold a valid pilot’s license (PPL or higher).</li>
-        <li>Logbook with at least 50 flight hours.</li>
-        <li>Completed checkout flight with SkyLease instructor.</li>
-        <li>Proof of renter’s insurance or purchase our rental coverage.</li>
-      </ul>
-    </div>
 
-    <div id="contact" class="section">
-      <h3>Contact Us</h3>
-      <p>Email: <a href="mailto:info@skylease.com">info@skylease.com</a></p>
-      <p>Phone: (555) 123-4567</p>
-      <p>Visit us on <a href="#">Instagram</a> or <a href="#">Twitter</a> for updates and offers.</p>
-    </div>
+
+<div class="content">
+  <div id="learn" class="section">
+    <h3>Types of aircrafts offered:</h3>
+    <p><strong>Cessna 172L:</strong> A popular single-engine, four-seat aircraft great for student pilots and scenic flights.</p>
+    <p><strong>Piper PA-28:</strong> Known for reliability and ease of handling, ideal for short-range travel and training.</p>
+    <p><strong>Cirrus SR22:</strong> A high-performance aircraft with luxury interiors and advanced avionics systems.</p>
+    <p><strong>Cessna 208 Caravan:</strong> A rugged, high-capacity aircraft built for group travel and regional hops.</p>
   </div>
 
-  <footer>
-    &copy; 2025 SkyLease Aviation. All rights reserved.
-  </footer>
-</body>
-</html>
+  <div id="requirements" class="section">
+    <h3>Requirements to Rent</h3>
+    <ul>
+      <li><p>Must hold a valid pilot’s license (PPL or higher).</p></li>
+      <li><p>Logbook with at least 50 flight hours.</p></li>
+      <li><p>Completed checkout flight with SkyLease instructor.</p></li>
+      <li><p>Proof of renter’s insurance or purchase our rental coverage.</p></li>
+    </ul>
+  </div>
+
+  <div id="contact" class="section">
+    <h3>Contact Us</h3>
+    <p>Email: <a href="mailto:info@skylease.com">info@skylease.com</a></p>
+    <p>Phone: (555) 123-4567</p>
+    <p>Visit us on <a href="#">Instagram</a> or <a href="#">Twitter</a> for updates and offers.</p>
+	
+  </div>
+</div>
+
+<footer style="background-color: #001f3f; text-align: center; padding: 20px; font-size: 14px; color: #fff;">
+  &copy; 2025 SkyLease Aviation. All rights reserved.<br>
+  <a href="mailto:info@skylease.com" style="color: #00aaff;">Contact Us</a> |
+  <a href="skyleaserough.html" style="color: #00aaff;">Return to Home</a>
+</footer>
