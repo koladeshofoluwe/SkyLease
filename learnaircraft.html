@@ -5,6 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SkyLease | Aircraft Rental & Info</title>
   <style>
+	  .toggle-box {
+  display: none;
+}
+
+.toggle-label {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #00aaff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.aircraft-details {
+  display: none;
+  margin-top: 10px;
+}
+
+.toggle-box:checked + .toggle-label + .aircraft-details {
+  display: block;
+}
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -227,6 +250,10 @@ body::before {
   <img src="plane.jpg" alt="Cessna 172" class="aircraft-img">
   <div class="aircraft-info">
     <h3>Cessna 172</h3>
+	  <input type="checkbox" id="toggle-1" class="toggle-box">
+    <label for="toggle-1" class="toggle-label">More Info</label>
+    <div class="aircraft-details">
+
     <p>A popular single-engine aircraft great for training and scenic flights. Easy to fly and super reliable.</p>
 	<ul>
 		<li><strong>Top Speed:</strong> 140 knots</li>
@@ -242,6 +269,11 @@ body::before {
 	<img src="plane2.jpg" alt="Piper PA-28 Cherokee" class="aircraft-img">
 	<div class="aircraft-info">
 	<h3>Piper PA-28 Cherokee</h3>
+		
+	<input type="checkbox" id="toggle-1" class="toggle-box">
+	<label for="toggle-1" class="toggle-label">More Info</label>
+	<div class="aircraft-details">
+
 	<p>Known for reliability and ease of handling, ideal for short range travel and training.</p>
 	<ul>
 		<li><strong>Top Speed:</strong> 125 knots</li>
@@ -257,6 +289,11 @@ body::before {
 	<img src="plane3.jpg" alt="Cirrus SR22" class="aircraft-img">
 	<div class="aircraft-info">
 	<h3>Cirrus SR22</h3>
+		
+	<input type="checkbox" id="toggle-1" class="toggle-box">
+	<label for="toggle-1" class="toggle-label">More Info</label>
+	<div class="aircraft-details">
+
 	<p> A high-performance single-engine aircraft known for its speed, luxury interior, and safety features. It's one of the most popular aircraft among private owners and business flyers due to its advanced avionics and built-in parachute system </p>
 	<ul>
 		<li><strong>Top Speed:</strong> 183 knots</li>
@@ -273,6 +310,11 @@ body::before {
 	<img src="plane4.jpg" alt="Cessna 208 Caravan" class="aircraft-img">
 	<div class="aircraft-info">
 	<h3>Cessna 208 Caravan</h3>
+		
+	<input type="checkbox" id="toggle-1" class="toggle-box">
+	<label for="toggle-1" class="toggle-label">More Info</label>
+	<div class="aircraft-details">
+
 	<p>A versatile, high-capacity turboprop aircraft widely used for regional transport, skydiving ops, and short-haul commercial flights. Its rugged design and reliable performance make it perfect for group travel or cargo runs in remote areas.</p>
 		<li><strong>Top Speed:</strong> 186 knots</li>
 		<li><strong>Range:</strong>970 nautical miles</li>
