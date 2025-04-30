@@ -4,13 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SkyLease | Aircraft Rental & Info</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0a0a0a;
-      color: #ffffff;
-    }
+
+ <!-- Preload slideshow images for better performance -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1600&q=80">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1541807084-5c52b6b31e47?auto=format&fit=crop&w=1600&q=80">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=1600&q=80">
+
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+  }
 
     header {
       background-color: #001f3f;
@@ -66,6 +76,7 @@
   text-align: center;
   padding: 20px;
   text-shadow: 2px 2px 6px #000;
+  transition: background-image 1s ease-in-out;
 }
 
     .hero-content {
@@ -134,6 +145,8 @@
 		padding: 15px;
 		background-color: #111;
 		border-radius: 10px;
+		max-width:7000px;
+		margin-right: auto;
 		}
 		
 	.aircraft-box {
@@ -143,15 +156,17 @@
 		padding: 20px;
 		border-radius: 10px;
 		background-color: #111;
-		}
+		max-width:700px;
+		margin-right: auto;
+	      }
 		
-	.aircraft-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
-  flex-wrap: wrap;
-}
+	       .aircraft-flex {
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: flex-start;
+                 gap: 30px;
+                 flex-wrap: wrap;
+               }
 
 .aircraft-text {
   flex: 1;
@@ -191,6 +206,7 @@
     }
   </style>
 </head>
+	
 <body>
   <header>
     <img src="logo.png" alt="SkyLease Logo">
@@ -204,7 +220,7 @@
     <a href="#contact">Contacts</a>
   </nav>
 
-  <div class="hero">
+  <div class="hero" id="hero">
     <div class="hero-content">
       <h2>We Get Fly</h2>
       <p>SkyLease offers premium aircraft rentals for pilots, students, and aviation lovers. Whether you're flying solo or exploring the skies with friends, we've got you covered.</p>
@@ -237,8 +253,7 @@
     <h3>Contact Us</h3>
     <p>Email: <a href="mailto:info@skylease.com">info@skylease.com</a></p>
     <p>Phone: (555) 123-4567</p>
-    <p>Visit us on <a href="#">Instagram</a> or <a href="#">Twitter</a> for updates and offers.</p>
-	
+    <p>Visit us on <a href="#">Instagram</a> or <a href="#">Twitter</a> for updates and offers.</p>	
   </div>
 </div>
 
@@ -263,8 +278,6 @@
     function changeBackground() {
       // Change the background image
       hero.style.backgroundImage = `url('${images[currentIndex]}')`;
-
-      // Increment index and loop back to the start if needed
       currentIndex = (currentIndex + 1) % images.length;
     }
 
