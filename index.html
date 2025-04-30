@@ -242,8 +242,34 @@
   </div>
 </div>
 
-<footer style="background-color: #001f3f; text-align: center; padding: 20px; font-size: 14px; color: #fff;">
+<footer>
   &copy; 2025 SkyLease Aviation. All rights reserved.<br>
-  <a href="mailto:info@skylease.com" style="color: #00aaff;">Contact Us</a> |
-  <a href="skyleaserough.html" style="color: #00aaff;">Return to Home</a>
+  <a href="mailto:info@skylease.com">Contact Us</a> |
+  <a href="skyleaserough.html">Return to Home</a>	
 </footer>
+	
+  <script>
+    const hero = document.getElementById("hero");
+
+    // Array of images for the slideshow
+    const images = [
+      "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1541807084-5c52b6b31e47?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=1600&q=80"
+    ];
+
+    let currentIndex = 0;
+
+    function changeBackground() {
+      // Change the background image
+      hero.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+      // Increment index and loop back to the start if needed
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    changeBackground(); // Set the first image
+    setInterval(changeBackground, 5000); // Change image every 5 seconds
+  </script>
+</body>
+</html>
