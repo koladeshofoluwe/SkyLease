@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyLease | Aircraft Rental & Info</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #001f3f;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 100px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    header h1 {
+      color: #00aaff;
+      margin: 0;
+    }
+
+    header p.slogan {
+      color: #00aaff;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #003366;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #00aaff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  height: 500px; /* ← Increase from 350px to 500px (or more) */
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px; /* ← Match the container height */
+  object-fit: cover;
+  border-bottom: 4px solid #00aaff;
+}
+
+
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1s;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+
+    .rent-btn {
+      background-color: #00aaff;
+      color: white;
+      padding: 10px 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      border-radius: 6px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .rent-btn:hover {
+      background-color: #0077cc;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('sky.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -2;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+    footer {
+      background-color: #001f3f;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+	
+	.slide img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  image-rendering: auto;
+}
+
+.tagline-bar {
+  width: 100%;
+  background-color: #001f3f;
+  display: flex;
+  justify-content: center;
+}
+
+.tagline-box {
+  padding: 15px 25px;
+  border: 2px solid #00aaff;
+  border-radius: 10px;
+  background-color: #0a0a0a;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.tagline {
+  color: #00aaff;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.rental-form-box {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #111;
+  border: 2px solid #00aaff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 170, 255, 0.1);
+}
+
+.rental-form-box h2 {
+  color: #00aaff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rental-form-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.rental-form-box label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.rental-form-box input,
+.rental-form-box select {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+.rental-form-box input:focus,
+.rental-form-box select:focus {
+  border-color: #00aaff;
+  outline: none;
+}
+
+.rental-form-box button {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #00aaff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.rental-form-box button:hover {
+  background-color: #0077cc;
+}
+
+.info-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto 20px;
+}
+
+.info-box {
+  flex: 1 1 280px;
+  background-color: #111;
+  border: 2px solid #00aaff;
+  border-radius: 10px;
+  padding: 20px;
+  color: #ddd;
+  box-shadow: 0 4px 12px rgba(0, 170, 255, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 170, 255, 0.2);
+}
+
+.info-box h3 {
+  color: #00aaff;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+
+
+    a {
+      color: #00aaff;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="SkyLease Logo">
+    <h1>SkyLease</h1>
+    <p class="slogan">Learn about our Aircrafts!</p>
+  </header>
+
+  <nav>
+    <a href="skyleaserough.html">Home</a>
+    <a href="learnaircraft.html">Learn About Aircraft</a>
+    <a href="rental.html">Apply for rental license</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+
+  <!-- ✅ Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slide fade"><img src="cessna.jpg" alt="Cessna 172"></div>
+    <div class="slide fade"><img src="piper.jpg" alt="Piper PA-28 Cherokee"></div>
+    <div class="slide fade"><img src="plane3.jpg" alt="Cirrus SR22"></div>
+    <div class="slide fade"><img src="caravannn.jpg" alt="Cessna 208 Caravan"></div>
+  </div>
+  
+	<div class="tagline-bar">
+  <div class="tagline-box">
+    <p class="tagline">Rent from our selection of premium aircraft.</p>
+  </div>
+</div>
+
+<!-- ✈️ Info Box Row (cleaned up) -->
+<div class="info-box-container">
+  <div class="info-box">
+    <h3>How It Works</h3>
+    <p>Choose your aircraft, select your rental date, and submit your request. Our team will confirm availability within 24 hours.</p>
+  </div>
+  <div class="info-box">
+    <h3>Requirements</h3>
+    <p>Valid pilot license and government-issued ID required for all rentals. First-time flyers must complete a safety briefing.</p>
+  </div>
+  <div class="info-box">
+    <h3>Rates & Scheduling</h3>
+    <p>Rates start at $135/hr. Flexible scheduling available — contact us for group bookings or long-term rentals.</p>
+  </div>
+</div>
+
+
+<div class="rental-form-box">
+  <h2>Rent an Aircraft</h2>
+  <form action="success.html" method="get">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="aircraft">Select Aircraft</label>
+    <select id="aircraft" name="aircraft" required>
+      <option value="">-- Choose an Aircraft --</option>
+      <option value="Cessna 172">Cessna 172</option>
+      <option value="Piper PA-28">Piper PA-28</option>
+      <option value="Cirrus SR22">Cirrus SR22</option>
+      <option value="Cessna 208 Caravan">Cessna 208 Caravan</option>
+    </select>
+
+    <label for="date">Rental Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="duration">Duration (hours)</label>
+    <input type="number" id="duration" name="duration" min="1" required>
+
+    <button type="submit">Submit Request</button>
+  </form>
+</div>
+
+
+
+  <!-- ✅ Footer -->
+  <footer>
+    &copy; 2025 SkyLease Aviation. All rights reserved.<br>
+    <a href="mailto:info@skylease.com">Contact Us</a> |
+    <a href="skyleaserough.html">Return to Home</a>
+  </footer>
+
+  <!-- ✅ Slideshow Script -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      const slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+  </script>
+
+</body>
+</html>
