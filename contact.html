@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyLease | Contact</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #001f3f;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 100px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    header h1 {
+      color: #00aaff;
+      margin: 0;
+    }
+
+    header p.slogan {
+      color: #00aaff;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #003366;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #00aaff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background-image: url('piper.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      text-shadow: 2px 2px 6px #000;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #dddddd;
+    }
+
+    /* Main Content Section */
+    .content {
+      padding: 40px;
+      background-color: #111;
+      text-align: center;
+    }
+
+    /* Contact Form Box */
+    .contact-box {
+      border: 2px solid #00aaff;
+      border-radius: 10px;
+      padding: 40px;
+      max-width: 800px;
+      margin: 50px auto;
+      box-shadow: 0 0 10px rgba(0, 170, 255, 0.2);
+      background-color: #111;
+    }
+
+    .contact-box h2 {
+      color: #00aaff;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    form label {
+      color: #00aaff;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin-top: 15px;
+      display: block;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    form button {
+      background-color: #00aaff;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #0077cc;
+    }
+
+    /* Contact Information Section */
+    .contact-info {
+      background-color: #111;
+      padding: 20px;
+      border: 2px solid #00aaff;
+      border-radius: 10px;
+      margin: 40px auto;
+      width: 80%;
+      max-width: 700px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .contact-info h3 {
+      color: #00aaff;
+      margin-bottom: 10px;
+    }
+
+    .contact-info a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #001f3f;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #00aaff;
+    }
+
+    /* Body Background Image */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('sky.jpg'); /* Add background image here */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -2;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="SkyLease Logo">
+    <h1>SkyLease</h1>
+    <p class="slogan">Contact Us</p>
+  </header>
+
+  <nav>
+    <a href="skyleaserough.html">Home</a>
+    <a href="learnaircraft.html">Learn About Aircraft</a>
+    <a href="rental.html">Apply for Rental License</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-content">
+      <h2>Let’s Talk</h2>
+      <p>Have a question, comment, or flight inquiry? Reach out — we’re here to help!</p>
+    </div>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="content">
+    <!-- Contact Form Box -->
+    <div class="contact-box">
+      <h2>Send Us a Message</h2>
+      <form action="success.html" method="POST"> <!-- This is the form action, replace with your backend URL if needed -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Contact Info Section -->
+  <div class="contact-info">
+    <h3>Contact Us</h3>
+    <p><strong>Email:</strong> <a href="mailto:info@skylease.com">info@skylease.com</a></p>
+    <p><strong>Phone:</strong> (555) 123-4567</p>
+    <p>Visit us on <a href="https://instagram.com" target="_blank">Instagram</a> or <a href="https://twitter.com" target="_blank">Twitter</a> for updates and offers.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 SkyLease Aviation. All rights reserved. |
+    <a href="mailto:info@skylease.com">info@skylease.com</a>
+  </footer>
+</body>
+</html>
