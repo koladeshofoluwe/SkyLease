@@ -4,23 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SkyLease | Aircraft Rental & Info</title>
-
- <!-- Preload slideshow images for better performance -->
-  <link rel="preload" as="image" href="https://richluxurylifestyle.com/wp-content/uploads/2020/06/1592988883_Best-Luxurious-Private-jets-1072x1072.jpeg">
-  <link rel="preload" as="image" href="https://richluxurylifestyle.com/wp-content/uploads/2020/06/1592988883_Best-Luxurious-Private-jets-1072x1072.jpeg">
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?auto=format&fit=crop&w=1600&q=80">
-
-<style>
-  html{
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0a0a0a;
-    color: #ffffff;
-  }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+    }
 
     header {
       background-color: #001f3f;
@@ -29,7 +19,7 @@
     }
 
     header img {
-      max-width: 200px;
+      max-width: 100px;
       display: block;
       margin: 0 auto 10px;
     }
@@ -65,18 +55,17 @@
 
     .hero {
   position: relative;
-   background-image: url(https://lapatiala.com/wp-content/uploads/2024/06/Small-Private-Jets.png);
+   background-image: url(displayplane.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
   text-shadow: 2px 2px 6px #000;
-  transition: background-image 1s ease-in-out;
 }
 
     .hero-content {
@@ -145,8 +134,6 @@
 		padding: 15px;
 		background-color: #111;
 		border-radius: 10px;
-		max-width:7000px;
-		margin-right: auto;
 		}
 		
 	.aircraft-box {
@@ -156,17 +143,15 @@
 		padding: 20px;
 		border-radius: 10px;
 		background-color: #111;
-		max-width:700px;
-		margin-right: auto;
-	      }
+		}
 		
-	       .aircraft-flex {
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: flex-start;
-                 gap: 30px;
-                 flex-wrap: wrap;
-               }
+	.aircraft-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
 
 .aircraft-text {
   flex: 1;
@@ -200,13 +185,30 @@
   right: 0;
 }
 
+	    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('sky.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: -2;
+      opacity: 0.1;
+      pointer-events: none;
+    }
+
+
+
 
     a {
       color: #00aaff;
     }
   </style>
 </head>
-	
 <body>
   <header>
     <img src="logo.png" alt="SkyLease Logo">
@@ -217,10 +219,10 @@
   <nav>
     <a href="learnaircraft.html">Learn About Aircraft</a>
     <a href="rental.html">Apply for rental license</a>
-    <a href="#contact">Contacts</a>
+        <a href="contact.html">Contact</a>
   </nav>
 
-  <div class="hero" id="hero">
+  <div class="hero">
     <div class="hero-content">
       <h2>We Get Fly</h2>
       <p>SkyLease offers premium aircraft rentals for pilots, students, and aviation lovers. Whether you're flying solo or exploring the skies with friends, we've got you covered.</p>
@@ -240,6 +242,7 @@
   </div>
 
   <div id="requirements" class="section">
+
     <h3>Requirements to Rent</h3>
     <ul>
       <li><p>Must hold a valid pilot’s license (PPL or higher).</p></li>
@@ -253,37 +256,13 @@
     <h3>Contact Us</h3>
     <p>Email: <a href="mailto:info@skylease.com">info@skylease.com</a></p>
     <p>Phone: (555) 123-4567</p>
-    <p>Visit us on <a href="#">Instagram</a> or <a href="#">Twitter</a> for updates and offers.</p>	
+    <p>Visit us on <a href="#">Instagram</a> or <a href="#">Twitter</a> for updates and offers.</p>
+	
   </div>
 </div>
 
-<footer>
+<footer style="background-color: #001f3f; text-align: center; padding: 20px; font-size: 14px; color: #fff;">
   &copy; 2025 SkyLease Aviation. All rights reserved.<br>
-  <a href="mailto:info@skylease.com">Contact Us</a> |
-  <a href="skyleaserough.html">Return to Home</a>	
+  <a href="mailto:info@skylease.com" style="color: #00aaff;">Contact Us</a> |
+  <a href="skyleaserough.html" style="color: #00aaff;">Return to Home</a>
 </footer>
-	
-  <script>
-    const hero = document.getElementById("hero");
-
-    // Array of images for the slideshow
-    const images = [
-      "https://th.bing.com/th/id/R.86c81b35c7bff565d23bdc2bd2f06fc5?rik=yty0uMy3Q4YhuQ&pid=ImgRaw&r=0",
-      "https://flyalliance.com/wp-content/uploads/2023/05/three-private-jets-in-an-airport-hanger-one-jet.jpg",
-      "https://richluxurylifestyle.com/wp-content/uploads/2020/06/1592988883_Best-Luxurious-Private-jets-1072x1072.jpeg",
-      "https://3.bp.blogspot.com/-PAJVwT8_wSI/UfJjJ4AxFGI/AAAAAAAAWzg/GbgMrqr-LDs/s1600/Sovereign6Desert-Jet-provides-private-jet-charter-flights-and-aircraft-management-resize.jpg"
-    ];
-
-    let currentIndex = 0;
-
-    function changeBackground() {
-      // Change the background image
-      hero.style.backgroundImage = `url('${images[currentIndex]}')`;
-      currentIndex = (currentIndex + 1) % images.length;
-    }
-
-    changeBackground(); // Set the first image
-    setInterval(changeBackground, 5000); // Change image every 2 seconds
-  </script>
-</body>
-</html>
